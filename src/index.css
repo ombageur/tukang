@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  @apply bg-gray-50;
+}
+
+section {
+  scroll-margin-top: 80px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  @apply text-white bg-black/30 rounded-full w-12 h-12 grid place-items-center;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  @apply text-2xl;
+}
+
+.swiper-pagination-bullet {
+  @apply bg-white/70;
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-white;
+}
+
+@layer utilities {
+  .aspect-w-16 {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+/* Tambahkan style untuk container */
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Tambahkan style untuk grid */
+.grid {
+  display: grid;
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+@screen md {
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@screen lg {
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Tambahkan untuk smooth scrolling */
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+
+/* Prevent content from being hidden under fixed elements */
+.pb-20 {
+  padding-bottom: 5rem;
+}
+
+.pt-16 {
+  padding-top: 4rem;
+} 
